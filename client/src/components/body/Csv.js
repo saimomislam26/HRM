@@ -74,7 +74,7 @@ function Csv(props) {
     const style = useMemo(
         () => ({
             ...baseStyle,
-            ...(isDragActive ? activeStyle : {}),
+            ...(isDragActive ? activeStyle : { borderColor: "black" }),
             ...(isDragAccept ? acceptStyle : {}),
             ...(isDragReject ? rejectStyle : {})
         }),
