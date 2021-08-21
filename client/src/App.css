@@ -1,0 +1,77 @@
+body{
+  background-color: rgb(230, 225, 220)!important;
+
+}
+/* Navbar Design */
+.color{
+  color: white;
+}
+.folio{
+  color:#BF252B
+}
+.nav{
+  margin-left: auto;
+}
+.nav-color{
+  color:black 
+}
+.nav-color:hover{
+  color:#BF252B
+}
+.font-weight-bolder{
+  font-weight: bolder;
+
+}
+.font-weight-bolder:hover{
+  color: #BF252B
+}
+@media(max-width:768px) {
+  .Home_Icon{
+    margin-top: 180px !important;
+  }
+}
+
+/* Add Employee */
+.signup-form{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:auto;
+  /* border: 2px red solid; */
+}
+.signup-content{
+  margin-top: 50px;
+  margin-bottom: 20px;
+    height: auto;
+    width: 70%;
+    border: white 2px solid;
+    box-shadow: 2px 2px 2px 2px black;
+}
+.another{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.for-btn{
+  display: flex;
+  justify-content: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* table styling */
+.table-bord{
+  margin-top: 50px;
+  margin-bottom: 20px;
+    height: auto;
+    width: auto;
+    border: white 2px solid;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
