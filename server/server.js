@@ -48,7 +48,6 @@ app.post('/upload', (req, res) => {
             return res.status(500).json({ message: err });
         }
 
-        // return res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
     });
 
     const fileName = `${__dirname}/uploads/${file.name}`;

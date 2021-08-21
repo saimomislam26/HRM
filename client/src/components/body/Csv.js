@@ -56,7 +56,8 @@ function Csv(props) {
                         reader.onabort = () => console.log('file reading was aborted')
                         reader.onerror = () => console.log('file reading has failed')
                         reader.onload = () => {
-                            // Do whatever you want with the file contents
+
+                            setSelectedFile(file)
                             const binaryStr = reader.result
                             console.log(binaryStr)
                         }
@@ -86,6 +87,12 @@ function Csv(props) {
         },
         []
     );
+    console.log(acceptedFiles)
+    var filepath = acceptedFiles.map(file => (
+        <li key={file.path}>
+            {file.path} - {file.size} bytes
+        </li>
+    ));
 
     const postData = async (e) => {
         e.preventDefault();
@@ -110,8 +117,13 @@ function Csv(props) {
         }
 
     }
+    var filepathchange
     const onChangeHandle = (e) => {
         setSelectedFile(e.target.files[0])
+        console.log(e.target.files[0])
+        filepathchange = e.target.files[0].name
+        // filepathchange = <li >{e.target.files[0].name} - {e.target.files[0].size} bytes</li>
+        // console.log(filepathchange)
     }
     return (
         <div className="container">
@@ -127,6 +139,11 @@ function Csv(props) {
                 </div>
 
             </div>
+            <aside>
+                <h4 className="ml-5">File</h4>
+                <ul>{filepath}</ul>
+
+            </aside>
             <div className="mt-3 d-flex justify-content-center">
                 <button type="button" name='file' className="btn btn-primary" onClick={postData}>
                     Add
