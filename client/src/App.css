@@ -75,3 +75,11 @@ input::-webkit-inner-spin-button {
     box-shadow: 2px 2px 2px 2px black;
 }
 
+/* Drag n drop */
+.drag{
+  box-shadow: 2px 2px 2px 2px black;
+  border:lightcyan;
+  height:auto
+}
+
+

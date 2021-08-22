@@ -130,14 +130,14 @@ function Csv(props) {
             {
                 message ? <Message message={message} /> : null
             }
-            <div {...getRootProps({ style })}>
+
+            <div className="drag" {...getRootProps({ style })}>
                 <input {...getInputProps()} />
                 <p>Drag 'n' drop some files here</p>
                 <em>(Only CSV File will be accepted)</em>
                 <div className="mt-3">
                     <input type="file" name="file" accept=".xlsx, .xls, .csv" onChange={onChangeHandle} />
                 </div>
-
             </div>
             <aside>
                 <h4 className="ml-5">File</h4>
